@@ -20,26 +20,23 @@ int first(vector<int>& nums, int x) {
     return ans;
 
 }
-int last(vector<int>& nums, int x) {
-    int s=0;
-    int e=nums.size()-1;
-    int ans=-1;
-    while(s<=e){
-        int mid=s+(e-s)/2;
-        if(nums[mid]==x){
-            ans=mid;
-             s=mid+1;
+ int last(vector<int>& nums, int x) {
+        int s = 0;
+        int e = nums.size() - 1;
+        int ans = -1; // Default to -1 if not found
+        while (s <= e) {
+            int mid = s + (e - s) / 2;
+            if (nums[mid] == x) {
+                ans = mid;    // Potential answer
+                s = mid + 1;  // Move right to find later occurrence
+            } else if (x > nums[mid]) {
+                s = mid + 1;  // Search right
+            } else {
+                e = mid - 1;  // Search left
+            }
         }
-        else if(x>nums[mid]){
-            s=mid+1;
-        }
-        else{
-            e=mid-11;
-        }
+        return ans;
     }
-    return ans;
-
-}
     vector<int> searchRange(vector<int>& nums, int target) {
        int k = first(nums, target);
         int k1 = (k == -1) ? -1 : last(nums, target);
