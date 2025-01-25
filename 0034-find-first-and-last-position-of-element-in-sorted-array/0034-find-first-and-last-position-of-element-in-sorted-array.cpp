@@ -27,16 +27,15 @@ int last(vector<int>& nums, int x) {
         while (s <= e) {
        int mid = s + (e - s) / 2;
             if (nums[mid] == x) {
-                ans = mid;    // Potential answer
+                ans = mid;   
                 s = mid + 1;
             }
-        else if(x>nums[mid]){
-            s=mid+1;
+        else if (x > nums[mid]) {
+                s = mid + 1; 
+            } else {
+                e = mid - 1;  
+            }
         }
-        else{
-            e=mid-11;
-        }
-    }
     return ans;
 
 }
