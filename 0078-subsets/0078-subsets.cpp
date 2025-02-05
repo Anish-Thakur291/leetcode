@@ -20,7 +20,7 @@ public:
         vector<vector<int> > ans;
         int index=0;
         vector<int> output;
-        solve(nums,output,index,ans);
+        solve(nums,output,0,ans);
         return ans;
     }
 };
