@@ -10,8 +10,7 @@ class Solution {
 
        //including num[i] output me push 
 
-       int element=nums[index];;
-       output.push_back(element);
+       output.push_back(nums[index]);
        solve(nums,output,index+1,ans);
 
 
