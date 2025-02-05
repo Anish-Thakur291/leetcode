@@ -18,7 +18,7 @@ class Solution {
 public:
     vector<vector<int>> subsets(vector<int>& nums) {
         vector<vector<int> > ans;
-        int index=0;
+       
         vector<int> output;
         solve(nums,output,0,ans);
         return ans;
