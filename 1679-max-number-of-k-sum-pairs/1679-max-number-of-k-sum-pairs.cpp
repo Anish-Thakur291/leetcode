@@ -13,11 +13,9 @@ public:
             e--;
         }
         else if(sum>k){
-            count-=1;
             e--;
         }
         else{
-            count +=1;
             s++;
         }
         
