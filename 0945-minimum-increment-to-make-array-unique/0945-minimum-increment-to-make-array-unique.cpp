@@ -11,7 +11,7 @@ public:
         sort(nums.begin(),nums.end());
         for(int i=1;i<nums.size();i++){
     if(nums[i]<=nums[i-1]){
-         int newVal = nums[i - 1] + 1;
+         int newVal = nums[i] + 1;
         count+=(newVal-nums[i]);
         nums[i]=newVal;
     }
