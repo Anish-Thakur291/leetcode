@@ -22,7 +22,7 @@ public:
      }
      else{
  
-        int firstmid= merge[total/2-1];
+        int firstmid= merge[(total/2)-1];
        
        int secondmid= merge[total/2];
        
