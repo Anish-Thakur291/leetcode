@@ -6,8 +6,7 @@ class Solution:
         while l<r:
             bar= min(height[l],height[r])
             water=r-l
-            area=bar*water
-            max_stored_water=max(max_stored_water,area)
+            max_stored_water=max(max_stored_water,bar*water)
             if height[l]<=height[r]:
                 l+=1
             else:
