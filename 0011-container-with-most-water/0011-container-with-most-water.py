@@ -3,7 +3,7 @@ class Solution:
         l=0
         r=len(height)-1
         max_stored_water=0
-        while l<=r:
+        while l<r:
             bar= min(height[l],height[r])
             water=r-l
             area=bar*water
