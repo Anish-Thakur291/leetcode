@@ -38,7 +38,7 @@ class Solution:
             curr.next=curr.next.next
             copy_curr=copy_curr.next
             curr=curr.next
-  t
+
 
         return dummy.next
 
