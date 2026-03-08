@@ -9,31 +9,6 @@ class Node:
 
 class Solution:
     def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
-        # temp=head
-        
-        # while temp:
-        #     copy=Node(temp.val)
-        #     copy.next=temp.next
-        #     temp.next=copy
-        #     temp=copy.next
-        # temp=head
-        # while temp:
-        #     if copy.random:
-        #         copy.next.random=temp.random.next
-        #     temp=temp.next.next
-        # # seprate node
-        # curr=head
-        # dummy=Node(-1)
-        # copy_curr=dummy
-        # while curr:
-        #     copy = curr.next
-        #     curr.next = copy.next
-
-        #     copy_curr.next = copy
-        #     copy_curr = copy
-
-        #     curr = curr.next
-        # return dummy.next
         
         if not head:
             return None
@@ -63,13 +38,7 @@ class Solution:
             curr.next=curr.next.next
             copy_curr=copy_curr.next
             curr=curr.next
-            # copy = curr.next
-            # curr.next = copy.next
-
-            # copy_curr.next = copy
-            # copy_curr = copy
-
-            # curr = curr.next
+  t
 
         return dummy.next
 
