@@ -10,16 +10,18 @@ class Solution:
         if not root:
             return []
         ans=[]
-        queue=deque([root])
-        while queue:
-            size=len(queue)
+        q=deque([root])
+        while q:
             level=[]
-            for i in range(size):
-                node=queue.popleft()
-                level.append(node.val)
+            size=len(q)
+            for _ in range(size):
+                node=q.popleft()
                 if node.left:
-                    queue.append(node.left)
+                    q.append(node.left)
                 if node.right:
-                    queue.append(node.right)
+                    q.append(node.right)
+                level.append(node.val)
             ans.append(level)
         return ans
+
+        
